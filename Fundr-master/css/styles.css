@@ -1,0 +1,142 @@
+html{
+    background: url(../img/background.jpg) fixed;
+    background-size:cover;
+}
+
+body{
+    font-family:Quicksand;
+    text-align:center;
+}
+
+#logo{
+    height:35vh;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5%;
+}
+
+
+#container{
+    font-family:Quicksand;
+    font-size:0.5em;
+    background-color:white;
+    opacity:0.45;
+    width:75%;
+    height:55vh;
+    text-align:center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    vertical-align:middle;
+    margin-top:5%;
+}
+
+#content{
+    clear:both; 
+    height:55vh; 
+    position:relative;
+    vertical-align:middle;
+}
+
+
+#register{
+    font-size:4em;
+    color:white;
+}
+
+h1{
+    font-family: Quicksand;
+    text-align:center;
+    font-size:4em;
+    color:white;
+}
+
+h2{
+    color:white;
+    font-size:1em;
+    
+}
+
+<!--------------------------->
+<!-- Nav Bar Bitches       -->
+
+#NavMenu p{
+    text-align:left;
+    display:block;
+}
+
+#NavMenu{
+    margin-left:-200px;
+    width:180px;
+    z-index:1010101010101;
+    position:absolute;
+    background-color:white;
+    border-color:#F6f6f6;
+    margin-top:8%;
+    height:93%;
+    box-shadow: 5px 0px 10px #2d2d2d;
+}
+
+#NavMenu a {
+    text-decoration: none;
+    color: black;
+}
+
+<!-- End of Nav Bar        -->
+
+
+<!---------------------------->
+<!--- Pie Chart/Circle Shit -->
+#PieContainer{
+    margin-left:auto;
+    margin-right:auto;
+    height:210px;
+    width:210px;
+}
+
+.circular {
+	width:170px;
+	border-radius: 150px;
+    z-index:1390813;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+    margin-top:-240px;
+    position:inherit;
+}
+<!--- End of Pie Chart/Circle Shit -->
+
+<!----------------------------------->
+<!--- Analytics --->
+#totalHours{
+    color:black;
+}
+
+#freeRemaining{
+    color:#ded0df;
+}
+
+#workRemaining{
+    color:#fcb118;
+}
+
+#DICKS{
+    color:#fcb118;
+}
+
+.white{ 
+    color:#FFF;
+}
+
+<!-- End of Analytics -->
+
+<!-- Create Task -->
+#create{
+    margin-top:20px;
+}
+
+<!-- Individual Task -->
+#countdown{
+    display:block;
+    margin-top:20px;
+}

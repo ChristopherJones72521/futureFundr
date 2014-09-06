@@ -1,0 +1,100 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<head>
+	<title>Eos</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    
+    <!-- css -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300,200' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet">
+    
+	<style type="text/css">
+		/* Prevent copy paste for all elements except text fields */
+		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+		input, textarea  { -webkit-user-select:text; }
+		body { color:black }
+	</style>
+	<script src='intelxdk.js'></script>
+	<script type="text/javascript">
+		/* This code is used to run as soon as Intel activates */
+		var onDeviceReady=function(){
+		//hide splash screen
+		intel.xdk.device.hideSplashScreen();
+		};
+		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+	</script>
+    
+    <!-- Include libs -->
+    <script src="libraries/jquery.js"></script>
+    <script src="libraries/chart.js"></script>
+    
+    <!-- Include backend files -->
+    <script src="backend/categories.js"></script>
+    <script src="backend/events.js"></script>
+    <script src="backend/users.js"></script>
+    
+</head>
+    
+    
+    <script src="http://debug-software.intel.com/target/target-script-min.js#W9KQjOmoLNXLv5fmT7Qzl3jgza_nX9AI07-x3EqfmUM"></script>
+<body>
+    
+    <!-- Nav -->
+    <img id="Nav" src="img/menu2.png" align="left" width="8%"/>
+    <div id="NavMenu">
+        <div id="Create"><a href="createTask.html"><p>Create Task</p></a></div>
+        <div id="Calendar"><a href="#"><p>Calendar</p></a></div>
+        <div id="ClearTasks"><a href="#" id="clearTasksBtn"><p>Clear Tasks</p></a></div>
+        <div id="Logout"><p>Logout</p></div>
+    </div>
+    
+    <!--Settings -->
+    <img src="img/cog.png" align="right" width="8%"/>
+    <br>
+    <br>
+    
+    <!-- Circle -->
+    <div id="PieContainer">
+        <canvas id="Pie" height="200px" width="200px"></canvas>
+        <img class="circular" src="img/Cincodemayo.jpg" align="middle"/>
+    </div>
+    
+    <h2>Christopher Jones</h2>
+    
+    <!-- Analytics -->
+    <hr>
+    <p id="totalHours">15 hour work day</p>
+    <p id="freeRemaining"> 5 hours remaining </p>
+    <p id="workRemaining"> 10 hours sucked dicks</p>
+    <hr>
+    
+    <div class="tasklist">
+    
+        <!-- This is where the tasks go -->
+    
+    </div>
+        
+     <!-- Include UI js files -->
+    <script src="ui/animations.js"></script>
+    <!-- Include activity -->
+    <script src="activities/index.js"></script>
+    <script>
+            var values = updatePieChart();
+            var doughnutData = [
+                {
+                    value: values[0],
+                    color:"#fcb118"
+                },
+                {
+                    value : values[1],
+                    color : "#ded0df"
+                }
+            ];
+            var myDoughnut = new Chart(document.getElementById("Pie").getContext("2d")).Doughnut(doughnutData);
+        </script>
+</body>
+</html>
